@@ -12,7 +12,7 @@ const Pagination = () => {
   
     const [todos, setTodos] = useState([]);
     const [page,setPage] = useState(1);
-    const [limit,setLimit] = useState(4)
+    const [limit,setLimit] = useState(3)
 
    
   useEffect(() => {
@@ -25,9 +25,9 @@ setTodos(d);
   return (
     <ButtonGroup>
       
-      <Button data-cy="pagination-first-button"><button onClick={() => setPage(setPage=>setPage+1)}>NextPage+</button></Button>
+      <Button data-cy="pagination-first-button"><button ></button></Button>
       <Button data-cy="pagination-previous-button">
-      <button>Previous</button></Button>
+      <button onClick={() => setLimit(setLimit=>setLimit-1)}>Previous</button></Button>
       <Select data-cy="pagination-limit-select">
         <option data-cy="pagination-limit-3">3</option>
         <option data-cy="pagination-limit-6">6</option>
